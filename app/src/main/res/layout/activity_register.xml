@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardBackgroundColor="@android:color/transparent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_background"
+            android:padding="4dp">
+
+            <ImageButton
+                android:id="@+id/button_back"
+                android:layout_width="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_back_20px"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/title"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_default="wrap"
+                app:layout_constraintHeight_default="wrap"/>
+
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/TitleTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CREATE ACCOUNT"
+                app:layout_constraintBottom_toTopOf="@+id/header_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/header_image"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/user1"
+                app:layout_constraintBottom_toTopOf="@+id/Name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <TextView
+                android:id="@+id/Name"
+                style="@style/LabelTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NAME "
+                app:layout_constraintBottom_toTopOf="@+id/Name_input"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header_image" />
+
+            <EditText
+                android:id="@+id/Name_input"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Escriba su nombre..."
+                android:inputType="textEmailAddress"
+                app:layout_constraintBottom_toTopOf="@+id/Email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+
+            <TextView
+                android:id="@+id/Email"
+                style="@style/LabelTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EMAIL "
+                app:layout_constraintBottom_toTopOf="@+id/Email_input"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Name_input" />
+
+            <EditText
+                android:id="@+id/Email_input"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Escriba el email..."
+                android:inputType="textEmailAddress"
+                app:layout_constraintBottom_toTopOf="@+id/Password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Email" />
+
+
+            <TextView
+                android:id="@+id/Password"
+                style="@style/LabelTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PASSWORD"
+                app:layout_constraintBottom_toTopOf="@+id/Password_input"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Email_input" />
+
+            <EditText
+                android:id="@+id/Password_input"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/lock4"
+                android:drawablePadding="8dp"
+                android:hint="Escriba la contraseña..."
+                android:inputType="textEmailAddress"
+                app:layout_constraintBottom_toTopOf="@+id/RepeatPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Password" />
+
+            <TextView
+                android:id="@+id/RepeatPassword"
+                style="@style/LabelTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="REPEAT PASSWORD"
+                app:layout_constraintBottom_toTopOf="@+id/RepeatPassword_input"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Password_input" />
+
+            <EditText
+                android:id="@+id/RepeatPassword_input"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/lock4"
+                android:drawablePadding="8dp"
+                android:hint="Vuelva a escribir la contraseña..."
+                android:inputType="text"
+                app:layout_constraintBottom_toTopOf="@+id/Text_error"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/RepeatPassword" />
+
+
+            <TextView
+                android:id="@+id/Text_error"
+                style="@style/ErrorTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                app:layout_constraintBottom_toTopOf="@+id/button_sign_up"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/RepeatPassword_input" />
+
+            <Button
+                android:id="@+id/button_sign_up"
+                style="@style/ButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="REGISTRARSE"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Text_error"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

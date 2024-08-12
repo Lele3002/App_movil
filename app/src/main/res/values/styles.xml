@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+     <!-- estilo para titulo TextView -->
+        <style name="TitleTextStyle" parent="TextAppearance.AppCompat.Large">
+            <item name="android:textSize">37sp</item>
+            <item name="android:textStyle">bold</item>
+            <item name="android:gravity">center</item>
+            <item name="android:textColor">#333333</item>
+            <item name="android:layout_marginTop">25dp</item>
+            <item name="android:padding">8dp</item>
+            <item name="android:shadowColor">#88000000</item>
+        </style>
+
+
+        <!-- estilo para elementos (email, password) TextView-->
+        <style name="LabelTextStyle" parent="TextAppearance.AppCompat.Medium">
+            <item name="android:textSize">15sp</item>
+            <item name="android:textStyle">bold</item>
+            <item name="android:layout_marginTop">15dp</item>
+            <item name="android:layout_marginLeft">10dp</item>
+        </style>
+
+        <!-- estilo para EditText -->
+        <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+            <item name="android:layout_marginTop">10dp</item>
+        </style>
+
+        <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+            <item name="android:backgroundTint">#0077B6</item> <!-- Azul mar -->
+            <item name="android:textColor">#FFFFFF</item> <!-- Texto blanco -->
+        </style>
+
+        <style name="ErrorTextStyle">
+            <item name="android:textColor">#D32F2F</item> <!-- Color rojo oscuro -->
+            <item name="android:textSize">14sp</item>
+            <item name="android:gravity">center</item>
+            <item name="android:layout_marginTop">8dp</item>
+            <item name="android:visibility">gone</item>
+        </style>
+</resources>
